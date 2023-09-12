@@ -1,0 +1,540 @@
+@import "normalizez.scss"
+@import "resets.scss"
+
+*
+    box-sizing: border-box
+
+@font-face 
+    font-family: "MontserratT"
+    src: url('../fonts/src/fonts/Montserrat-Regular.ttf')
+    font-display: swap
+    font-weight: regular
+    font-style: normal
+
+@font-face 
+    font-family: "Montserrat"
+    src: url('../fonts/Montserrat-SemiBold.ttf')
+    font-display: swap
+    font-weight: bold
+    font-style: normal
+
+html
+    font-family: "Montserrat"
+    font-weight: regular
+
+$color-blue: #5290EA
+$color-orange: #F28B64
+    
+.container
+    position: relative
+    max-width: 1140px
+    margin: 0 auto
+.main-section
+    position: relative
+    min-height: 800px
+    background: #F0F0F0
+    padding-top: 16px
+    overflow: hidden
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: 69px
+        align-items: center
+    &__logo
+        height: 69px
+    &__content-container
+        position: relative
+        display: flex
+        flex-direction: row
+    &__first-elipse
+        position: absolute
+        top: 129px
+        right: 80px
+    &__second-elipse
+        position: absolute
+        right: -120px
+        top: 650px
+
+.nav-menu       //новигационное меню 1-я секция//
+    &__list
+        display: flex
+        flex-direction: row
+    &__list-item
+        margin-right: 64px
+        font-size: 18px
+        &:last-child
+            margin-right: 0px
+        a
+            text-decoration: none
+            color: black
+
+.left-wrapper
+    position: relative
+    img
+        position: relative
+        z-index: 5
+    &__rectangle-blue
+        position: absolute
+        top: 150px
+        left: -50px
+        width: 565.95px
+        height: 220px
+        background: $color-blue
+        border-radius: 100px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        transform: rotate(-64deg)
+        z-index: 2
+    &__rectangle-orange
+        position: absolute
+        width: 618.43px
+        height: 220px
+        left: -30px
+        top: 160px
+        background: $color-orange
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        transform: rotate(-50.81deg)
+        z-index: 3
+    &__rectangle-grey
+        position: absolute
+        width: 608.97px
+        height: 220px
+        left: 10px
+        top: 190px
+        background: #E2E2E2
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        transform: rotate(-36.15deg)
+        z-index: 1
+
+.right-wrapper
+    width: 372px
+    position: absolute
+    top: 150px
+    right: 76px
+    z-index: 5
+    &__icons-box
+        margin-bottom: 1px
+        padding-left: 10px
+    &__title
+        margin-bottom: 5px
+    &__text
+        font-size: 16px
+        margin-bottom: 20px
+    
+
+.icons
+    display: inline-flex
+    
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border: 1px solid $color-blue
+        border-radius: 100px
+        margin-right: 17px
+        &:last-child
+            margin-right: 0px
+        i
+            font-size: 21px
+
+.title
+    font-size: 72px
+    position: relative
+    font-weight: bold
+    &__hr
+        width: 65px
+        position: absolute
+        bottom: 0px
+        margin: 0
+        border: none
+        border-top: 1px solid black
+
+.buttons
+    display: inline-flex
+    &__main-btn
+        margin-right: 32px
+        width: 200px
+        height: 60px
+        background: $color-orange
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        border: none
+        font-size: 18px
+        color: white
+        font-weight: bold
+    &__icon-btn
+       display: inline-flex 
+       align-items: center
+       img
+           margin-right: 12px
+    &__text
+        font-size: 16px
+
+.elipse
+    width: 194px
+    height: 194px
+    background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+    border-radius: 150px
+    display: flex
+    justify-content: center
+    align-items: center
+    &_dig
+        width: 282px
+        height: 282px
+    &__subtract
+        width: 129.33px
+        height: 129.33px
+        background: #F0F0F0
+        border-radius: 150px
+        &_big
+            width: 188px
+            height: 188px
+
+    
+
+.second-section
+    overflow: hidden        //декоративный круг не будет толкаь границы нашего сайта//
+    min-height: 700px       //задаем минимальную высоту 2 й секции//
+    &__container
+        padding-top: 32px   //отодвигаем Преподаю от вверха//
+        position: relative
+    &__title
+        margin-bottom: 40px     //отодвигаем карточки от заголовка//
+    &__cards-box
+        display: inline-flex    //виравневаем карточки по горизонтали//
+        justify-content: center
+        margin-bottom: 25px
+    &__cards-item
+        margin-right: 30px      //делаем отступи между карточками//
+        &:last-child
+            margin-right: 0     //обнуляем отступи в последней карточки//
+    &__icons-box
+        display: flex           //центрируем иконки 2-я секция//
+        justify-content: space-evenly
+    &__icons-item 
+        &:last-child
+            margin-right: 0
+    &__first-elipse
+        position: absolute
+        top: 80px
+        right: -60px
+        z-index: -1
+    &__second-elipse
+        position: absolute
+        top: 364px
+        left: -60px
+        z-index: -1
+//задаем размеры карточек/позиционируем//
+.cards-item
+    position: relative
+    width: 360px        
+    height: 360px
+    background: #E2E2E2
+    border-radius: 10px
+    display: flex
+    align-items: flex-end
+    &__img
+        height: 335px   //задаем висоту карточки/чтоб ничего не менялось//
+    &__text
+        width: 280px    //задаем ширину для текста карточек//
+        font-size: 36px
+        text-align: center
+        transform: rotate(90deg)    //поворачиваем текст //
+        position: absolute
+        top: 144px
+        right: -45px
+        font-weight: bold
+
+.cards-item_orange      //создали модификатор для цвета карточек//
+    background: $color-orange 
+
+.cards-item_blue        //создали модификатор для цвета карточек//
+    background: $color-blue 
+
+.icons-item
+    display: inline-flex
+    align-items: center
+    &__img
+        margin-right: 20px
+        width: 80px
+    &__text
+        font-size: 18px
+        span
+            font-size: 48px
+            font-weight: bold
+
+.third-section      //работаем с третей секцией//
+    position: relative
+    min-height: 640px
+    background: #F0F0F0
+    z-index: 0
+    overflow: hidden    //скрываем большой круг 3 секции//
+    &__container
+        display: flex
+        flex-direction: row
+        align-items: center     //центрируем обвертки 3- й секции по вертикали//
+        justify-content: space-between
+        padding-left: 167px
+        padding-top: 46px
+        font-weight: regular
+    &__right-wrapper
+        max-width: 480px
+    &__right-title
+        margin-bottom: 20px
+    &__text
+        font-size: 18px
+        margin-bottom: 30px
+    &__first-elipse
+        position: absolute      //позиционируем большой круг//
+        top: 140px
+        left: 110px
+        z-index: -1
+    &__figure
+        position: absolute  //позиционируем меньший круг в 3-й секции//
+        top: 249px
+        left: 15px
+        z-index: -1
+    &__second-elipse
+        position: absolute
+        right: -120px
+        top: -120px
+
+
+.title__hr_top
+    bottom: 75px
+
+.footer
+    &__img
+        position: absolute
+        left: -250px
+        bottom: 0px     //что б изображение было прижато к самому нижнему краю//
+    &__container
+        min-height: 272px
+        display: flex       //центрируем заголовок//
+        align-items: center
+        justify-content: flex-end
+    &__title
+        margin-bottom: 20px
+
+//адаптируем под мал комп или горизонтальный  планшет//
+@media (max-width: 1199px)
+    .container
+        width: 960px
+    .main-section
+        min-height: 690px
+    .left-wrapper
+        img
+            width: 750px
+    
+    &__rectangle-blue
+        width: 500px
+        height: 200px
+    &__rectangle-orange
+        width: 550px
+        height: 200px   
+    &__rectangle-grey
+        width: 500px
+        height: 200px
+    .right-wrapper
+        right: 20px
+    .main-section__first-elipse
+        right: 10px
+    .main-section__second-elipse
+        top: 560px
+
+    .second-section
+        min-height: 600px
+        &__cards-box
+            display: flex
+            justify-content: center
+    .cards-item
+        width: 300px
+        height: 300px
+        margin-right: 20px
+    .cards-item__img
+        height: 270px
+    .cards-item__text
+        top: 120px
+        font-size: 30px
+    .icons-item__img
+        margin-right: 10px
+
+    .third-section__container
+        padding-left: 40px
+    .third-section__right-title
+        max-width: 450px
+
+
+//вертикальный  планшет//
+@media (max-width: 991px)
+    .main-section
+        min-height: 530px
+        &__first-elipse
+            top: 70px               //подвигаем элипс вверх//
+        &__second-elipse
+            top: 400px              //вытаскиваем большой элипс//
+    .container
+        width: 720px
+    .left-wrapper
+        img
+            width: 550px
+    .left-wrapper
+        &__rectangle-blue
+            width: 380px
+            height: 130px
+        &__rectangle-orange
+            width: 410px
+            height: 130px
+        .left-wrapper__rectangle-grey 
+            width: 380px
+            height: 130px
+    .title
+        font-size: 60px
+    .right-wrapper
+        top: 75px
+        width: 300px
+        &__text
+            margin-bottom: 10px
+            font-size: 14px
+    .buttons
+        &__main-btn
+            font-size: 14px
+            margin-right: 10px
+            width: 160px
+            height: 50px
+        &__icon-btn
+            font-size: 14px
+    .elipse
+        width: 150px
+        height: 150px
+        &__subtract
+            width: 110px
+            height: 110px
+        &__subtract_big
+            width: 170px
+            height: 170px
+
+    .second-section
+        min-height: 450px
+        &__container
+            padding-top: 20px
+        &__title
+            margin-bottom: 25px
+        &__cards-box
+            margin-bottom: 10px
+        &__first-elipse
+            right: -35px
+        &__second-elipse
+            top: 262px
+            left: -35px
+
+    .cards-item
+        width: 220px
+        height: 220px
+        &__img
+            height: 200px
+        &__text
+            font-size: 22px
+            top: 92px
+            right: -75px
+    .icons-item
+        &__img
+            width: 50px
+        &__text
+            font-size: 14px
+            span
+                font-size: 30px
+
+    .elipse_dig
+        width: 250px
+        height: 250px
+
+
+    .third-section
+        min-height: 510px
+        &__left-title
+            display: none       // убираем заголовок в 3-й секции//
+        &__right-wrapper
+            max-width: 600px
+        &__container
+            justify-content: flex-start
+            padding-left: 20px
+            padding-top: 20px
+        &__right-title
+            margin-bottom: 10px
+
+    .title
+        &__hr_top
+            bottom: 60px
+
+    .footer
+        &__img
+            width: 500px
+        &__title
+            margin-bottom: 10px
+        &__container
+            min-height: 210px
+
+
+// горизонтальный телефон//
+@media (max-width: 767px)
+    .container
+        width: 540px
+    .nav-menu
+        position: fixed     // фиксируем меню//
+        top: 0
+        right: -100%        //меню будет выежать с права на лево// 
+        width: 50%
+        height: 100vh       //что бы наша висота всегда была 100% видимого экрана//
+        background: #5290EA
+        z-index: 20
+        transition: 1s all      //меню будет выежать с права на лево// 
+        &__list
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            height: 100%
+        &__list-item
+            margin-right: 0    //убираем отступ у последнего элемента меню//
+            font-size: 20px
+    .hamburger               //стилизуем гамбургер //
+        width: 30px
+        position: fixed
+        top: 40px
+        right: 30px
+        height: 14px
+        z-index: 30
+        span
+            height: 2px
+            width: 100%
+            display: block
+            background: black
+            margin-bottom: 4px     //разделяем полоску на 3  //
+            transition: 1s all      //добавляем анимации нашим элементам //
+            &:last-child
+                margin-bottom: 0        //обнуляем отступи для последнего элемента  //
+    .hamburger_active
+        span
+            margin-bottom: -2px
+            &:nth-child(1)               //обращаемся к каждому span с помощью псевдоклассов  //
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+    .nav-menu__active
+        right: 0        //меню будет выежать с права на лево// 
+
+
+//вертикальный телефон//
+@media (max-width: 575px)
+    .container
+        width: 100%
+
+
+
+
